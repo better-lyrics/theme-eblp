@@ -1,6 +1,7 @@
 # Even Better Lyrics Plus
 
 ![Installs](https://img.shields.io/endpoint?url=https://better-lyrics-themes-api.boidu.dev/api/badge/eblp)
+![Rating](https://img.shields.io/endpoint?url=https://better-lyrics-themes-api.boidu.dev/api/badge/eblp/rating)
 
 An enhanced lyrics theme with blur effects, rich animations, and a refined player layout
 
