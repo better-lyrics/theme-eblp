@@ -22,7 +22,7 @@
 ytmusic-player:not([video-mode]) {
   border-radius: 2rem;
   outline: 1px solid rgb(175 175 175 / 15%);
-	overflow: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: 1400px) {
