@@ -13,6 +13,11 @@
     "Segoe UI Symbol";
   --blyrics-font-weight: 600;
   --blyrics-wobble-duration: 1s;
+  --blyrics-glow-color: color(display-p3 1 1 1 / 0.0001);
+  --blyrics-word-wobble-transform-from: translateY(0);
+  --blyrics-word-wobble-transform-peak: translateY(-0.005em);
+  --blyrics-word-wobble-transform-settle: translateY(-0.028em);
+  --blyrics-word-wobble-transform-to: translateY(-0.0375em);
   --blyrics-panel-size: 50%;
   --blyrics-video-panel-size: 50%;
   --blyrics-fullscreen-panel-size: 55%;
@@ -70,7 +75,7 @@ ytmusic-player:not([video-mode]) {
   filter: blur(0px);
 }
 
-.blyrics-container > .blyrics--animating {
+.blyrics-container > .blyrics--active {
   opacity: 1 !important;
   filter: blur(0px);
 }
@@ -79,7 +84,7 @@ ytmusic-player:not([video-mode]) {
   transition:
     filter calc(var(--blyrics-duration) / 3) 0.4s,
     opacity calc(var(--blyrics-duration) / 2) 0.166s,
-    transform 0.166s var(--blyrics-anim-delay, 0s) !important;
+    transform 0.166s 0s !important;
   padding: 5px 0;
   transform-origin: left center;
 }
@@ -188,23 +193,6 @@ ytmusic-player-bar {
 
 .volume-slider.ytmusic-player-bar {
   opacity: 1;
-}
-
-.blyrics--word::after {
-  --blyrics-glow-color: color(display-p3 1 1 1 / 0.0001);
-}
-
-.blyrics--word[data-long-word]::after {
-  --blyrics-glow-color: color(display-p3 1 1 1 / 1);
-}
-
-@keyframes blyrics-wobble {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-0.0375em);
-  }
 }
 
 @keyframes marquee-scroll {
