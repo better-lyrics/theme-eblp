@@ -75,7 +75,10 @@ ytmusic-player:not([video-mode]) {
   filter: blur(0px);
 }
 
-.blyrics-container > .blyrics--active {
+/* .blyrics--active follows the scroll clock and drops ~0.5s before a line stops
+   playing; .blyrics--animating follows the audio clock. Older engines only ship
+   the former, so match either. */
+.blyrics-container > :is(.blyrics--active, .blyrics--animating) {
   opacity: 1 !important;
   filter: blur(0px);
 }
