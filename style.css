@@ -15,13 +15,17 @@
   --blyrics-wobble-duration: 1s;
   --blyrics-glow-color: color(display-p3 1 1 1 / 0.0001);
   --blyrics-word-wobble-transform-from: translateY(0);
-  --blyrics-word-wobble-transform-peak: translateY(-0.005em);
-  --blyrics-word-wobble-transform-settle: translateY(-0.028em);
-  --blyrics-word-wobble-transform-to: translateY(-0.0375em);
+  --blyrics-word-wobble-transform-peak: translateY(0);
+  --blyrics-word-wobble-transform-settle: translateY(0);
+  --blyrics-word-wobble-transform-to: translateY(0);
   --blyrics-panel-size: 50%;
   --blyrics-video-panel-size: 50%;
   --blyrics-fullscreen-panel-size: 55%;
   --blyrics-fullscreen-video-panel-size: 55%;
+	--blyrics-letter-wave-transform: translateY(-0.04em);
+  --blyrics-letter-wave-settle: translateY(-0.015em);
+  --blyrics-letter-wave-duration: 0.75s;
+  --blyrics-letter-wave-emphasis-scale: 1.09;
 }
 
 ytmusic-player:not([video-mode]) {
